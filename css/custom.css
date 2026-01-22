@@ -1,0 +1,319 @@
+/* ==========================================
+   博客排版优化样式
+   ========================================== */
+
+/* 全局字体优化 */
+:root {
+  --font-family-primary: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang SC", "Microsoft YaHei", sans-serif;
+  --font-family-code: "SF Mono", "Fira Code", Consolas, "Courier New", monospace;
+}
+
+/* 文章内容排版优化 */
+.post-content {
+  font-size: 17px;
+  line-height: 1.8;
+  font-family: var(--font-family-primary);
+}
+
+/* 文章段落间距 */
+.post-content p {
+  margin: 1.2em 0;
+  line-height: 1.8;
+}
+
+/* 文章标题样式 */
+.post-content h1,
+.post-content h2,
+.post-content h3,
+.post-content h4,
+.post-content h5,
+.post-content h6 {
+  margin-top: 2em;
+  margin-bottom: 1em;
+  font-weight: 600;
+  color: var(--text-highlight-color);
+}
+
+.post-content h2 {
+  font-size: 1.75em;
+  padding-bottom: 0.5em;
+  border-bottom: 2px solid var(--hr-color);
+}
+
+.post-content h3 {
+  font-size: 1.5em;
+}
+
+/* 链接样式优化 */
+.post-content a {
+  color: #425AEF;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.post-content a:hover {
+  color: #2d3bd1;
+  border-bottom-color: #425AEF;
+}
+
+/* 代码块样式优化 */
+.post-content code {
+  font-family: var(--font-family-code);
+  font-size: 0.9em;
+  padding: 0.2em 0.4em;
+  border-radius: 4px;
+  background-color: #f0f2f5;
+  color: #e83e8c;
+}
+
+.post-content pre {
+  background-color: #282c34;
+  border-radius: 8px;
+  padding: 1em;
+  overflow-x: auto;
+  margin: 1.5em 0;
+}
+
+.post-content pre code {
+  background-color: transparent;
+  color: #abb2bf;
+  padding: 0;
+  font-size: 14px;
+}
+
+/* 引用块样式 */
+.post-content blockquote {
+  border-left: 4px solid #425AEF;
+  background-color: #f5f7ff;
+  padding: 1em 1.5em;
+  margin: 1.5em 0;
+  border-radius: 0 8px 8px 0;
+  font-style: normal;
+}
+
+.post-content blockquote p {
+  margin: 0;
+  color: #333;
+}
+
+/* 表格样式优化 */
+.post-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5em 0;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.post-content table th,
+.post-content table td {
+  padding: 12px 16px;
+  text-align: left;
+  border-bottom: 1px solid #e8e8e8;
+}
+
+.post-content table th {
+  background-color: #425AEF;
+  color: white;
+  font-weight: 600;
+}
+
+.post-content table tr:hover {
+  background-color: #f5f7ff;
+}
+
+/* 无序列表样式 */
+.post-content ul {
+  padding-left: 1.5em;
+  margin: 1em 0;
+}
+
+.post-content ul li {
+  margin: 0.5em 0;
+  line-height: 1.6;
+  list-style-type: disc;
+}
+
+/* 有序列表样式 */
+.post-content ol {
+  padding-left: 1.5em;
+  margin: 1em 0;
+}
+
+.post-content ol li {
+  margin: 0.5em 0;
+  line-height: 1.6;
+  list-style-type: decimal;
+}
+
+/* 图片样式优化 */
+.post-content img {
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  max-width: 100%;
+  height: auto;
+  margin: 1.5em auto;
+  display: block;
+}
+
+/* 分隔线样式 */
+.post-content hr {
+  border: none;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #425AEF, transparent);
+  margin: 2em 0;
+}
+
+/* 首页文章卡片优化 */
+.card-list {
+  gap: 24px;
+}
+
+.card-list .card-item {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.card-list .card-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(66, 90, 239, 0.15);
+}
+
+/* 侧边栏样式优化 */
+.aside-card {
+  border-radius: 12px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.aside-card-title {
+  font-weight: 600;
+  color: #333;
+  border-bottom: 2px solid #425AEF;
+  padding-bottom: 0.5em;
+  margin-bottom: 1em;
+}
+
+/* 标签样式优化 */
+.tags-wrapper .tag {
+  border-radius: 20px;
+  padding: 6px 16px;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.tags-wrapper .tag:hover {
+  background-color: #425AEF;
+  color: white;
+  transform: scale(1.05);
+}
+
+/* 导航菜单优化 */
+.nav-menu a {
+  border-radius: 8px;
+  padding: 8px 16px;
+  transition: all 0.3s ease;
+}
+
+.nav-menu a:hover {
+  background-color: rgba(66, 90, 239, 0.1);
+  color: #425AEF;
+}
+
+/* 分页优化 */
+.pagination .page-number {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  margin: 0 4px;
+  transition: all 0.3s ease;
+}
+
+.pagination .page-number:hover {
+  background-color: #425AEF;
+  color: white;
+}
+
+.pagination .current .page-number {
+  background-color: #425AEF;
+  color: white;
+}
+
+/* 移动端适配 */
+@media screen and (max-width: 768px) {
+  .post-content {
+    font-size: 16px;
+  }
+  
+  .post-content h2 {
+    font-size: 1.5em;
+  }
+  
+  .post-content h3 {
+    font-size: 1.25em;
+  }
+  
+  .post-content pre {
+    padding: 0.75em;
+    margin: 1em 0;
+  }
+  
+  .post-content table {
+    font-size: 14px;
+  }
+  
+  .post-content table th,
+  .post-content table td {
+    padding: 8px 12px;
+  }
+}
+
+/* 代码高亮行号样式 */
+.code-pre-wrapper {
+  counter-reset: line;
+}
+
+.code-pre-wrapper .line {
+  display: block;
+  line-height: 1.6;
+}
+
+.code-pre-wrapper .line::before {
+  counter-increment: line;
+  content: counter(line);
+  display: inline-block;
+  width: 30px;
+  margin-right: 1em;
+  color: #6c757d;
+  text-align: right;
+  font-size: 12px;
+}
+
+/* 暗色模式适配 */
+[data-theme="dark"] .post-content a:hover {
+  color: #6c8aff;
+  border-bottom-color: #6c8aff;
+}
+
+[data-theme="dark"] .post-content code {
+  background-color: #2d2d2d;
+  color: #ff79c6;
+}
+
+[data-theme="dark"] .post-content blockquote {
+  background-color: #1e1e1e;
+  border-left-color: #6c8aff;
+}
+
+[data-theme="dark"] .post-content table th {
+  background-color: #3d3d3d;
+}
+
+[data-theme="dark"] .card-list .card-item:hover {
+  box-shadow: 0 8px 24px rgba(108, 138, 255, 0.2);
+}
